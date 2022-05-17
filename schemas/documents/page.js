@@ -17,6 +17,7 @@ export default {
       type: 'string',
       title: 'Title',
       description: 'Do not change the name of this field its dangerous ⚠️⚠️⚠️',
+
       readOnly: ({ currentUser }) => {
         return !currentUser.roles.find(({ name }) => name === 'administrator');
       },
@@ -27,13 +28,12 @@ export default {
       type: 'string',
       title: 'Label',
     },
-    {
-      name: 'updateTime',
-      type: 'string',
-      title: 'updateTime',
-      inputComponent: StringWithLimits,
-      validation: (Rule) => Rule.max(100),
-    },
+    // {
+    //   name: 'updateTime',
+    //   type: 'string',
+    //   title: 'updateTime',
+    //   inputComponent: StringWithLimits,
+    // },
     {
       name: 'content',
       type: 'array',
@@ -66,6 +66,23 @@ export default {
       description: 'Image for sharing previews on Facebook, Twitter etc.',
       fieldset: 'metadata',
     },
+    // {
+    //   title: 'Current popularity',
+    //   name: 'popularity',
+    //   type: 'number',
+    //   description: 'How many times this page has been Published',
+    //   // initialValue: async () => ({
+    //   //   input: await client.fetch(`*[title == 'Home' ]{
+
+    //   //     ,
+
+    //   //     }`),
+    //   // }),
+
+    //   readOnly: ({ currentUser }) => {
+    //     return !currentUser.roles.find(({ name }) => name === 'administrator');
+    //   },
+    // },
   ],
 
   preview: {
