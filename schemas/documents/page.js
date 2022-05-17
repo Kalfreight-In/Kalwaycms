@@ -1,5 +1,5 @@
 import { MasterDetailIcon } from '@sanity/icons';
-
+import StringWithLimits from '../../component/publishednot';
 export default {
   name: 'page',
   type: 'document',
@@ -26,6 +26,13 @@ export default {
       name: 'label',
       type: 'string',
       title: 'Label',
+    },
+    {
+      name: 'updateTime',
+      type: 'string',
+      title: 'updateTime',
+      inputComponent: StringWithLimits,
+      validation: (Rule) => Rule.max(100),
     },
     {
       name: 'content',

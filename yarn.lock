@@ -1658,7 +1658,7 @@
     "lodash" "^4.17.15"
     "slate" "0.72.3"
 
-"@sanity/react-hooks@2.30.0":
+"@sanity/react-hooks@^2.30.0", "@sanity/react-hooks@2.30.0":
   "integrity" "sha512-DGYau1KbvFHHK+dqqIXhMGvm9Q0Q9MuU9anlzXlDpscx1Hn9QJJNxNmJChGRTO8z2NOeQAHEUzqPT6XgJh5aKA=="
   "resolved" "https://registry.npmjs.org/@sanity/react-hooks/-/react-hooks-2.30.0.tgz"
   "version" "2.30.0"
