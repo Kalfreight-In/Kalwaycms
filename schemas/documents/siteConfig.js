@@ -15,6 +15,18 @@ export default {
       },
     },
     {
+      title: 'deleteloacalstorage',
+      name: 'deleteLocalStorage',
+      type: 'boolean',
+      initialValue: {
+        deleteLocalStorage: false
+      },
+      readOnly: ({ currentUser }) => {
+        return !currentUser.roles.find(({ name }) => name === 'administrator');
+      },
+      
+    }
+    {
       name: 'Email',
       type: 'string',
       title: 'Email address',
@@ -29,6 +41,7 @@ export default {
       type: 'string',
       title: 'Phone number',
     },
+
     {
       name: 'Timing_1',
       type: 'string',
